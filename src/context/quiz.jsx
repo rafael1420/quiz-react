@@ -1,5 +1,6 @@
 import { Children, createContext, use, useReducer } from "react";
 
+
 import questions from '../data/questions';
 
 const STAGES = ["Start", "Playing", "End"];
@@ -15,7 +16,10 @@ const quizReducer = (state, action) => {
 
     switch(action.type){
         case "CHANGE_STAGE":
-            return;
+            return {
+                ...STAGES,
+                gameStage: STAGES[1],
+            };
         default:
             return state;
     };
