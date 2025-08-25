@@ -1,6 +1,4 @@
 import { Children, createContext, use, useReducer } from "react";
-
-
 import questions from '../data/questions';
 
 const STAGES = ["Start", "Playing", "End"];
